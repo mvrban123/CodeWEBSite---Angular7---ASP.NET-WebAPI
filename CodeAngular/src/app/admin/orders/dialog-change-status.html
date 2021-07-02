@@ -1,0 +1,10 @@
+<div class="status-content">
+    <label><b>Status</b></label>
+    <select (change)="changeStatus($event.target.value)">
+        <option [value]="1">Na čekanju</option>
+        <option [value]="2">U obradi</option>
+        <option [value]="3">Spremno za isporuku</option>
+    </select>
+    <hr>
+    <button class="control-button control-button-blue" (click)="saveStatus()"><b>Spremi</b></button>
+</div>

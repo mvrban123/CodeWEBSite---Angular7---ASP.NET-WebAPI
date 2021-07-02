@@ -1,0 +1,10 @@
+<div class="user-panel">
+    <div class="user-panel-tabs">
+        <a class="user-panel-tab" routerLink="/userpanel/details" routerLinkActive="active-link">Korisnički račun</a>
+        <a class="user-panel-tab" routerLink="/userpanel/orders" routerLinkActive="active-link">Narudžbe</a>
+        <a class="user-panel-tab" routerLink="/admin/users" style="float: right" *ngIf="userRole == 'Admin'">Admin Panel</a>
+    </div>
+    <div class="user-panel-content">
+        <router-outlet></router-outlet>
+    </div>
+</div>

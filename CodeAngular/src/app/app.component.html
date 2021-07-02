@@ -1,0 +1,31 @@
+<div class="header">
+  <h2 class="logo" routerLink="/home">Code - iT</h2>
+  <input type="checkbox" id="chk">
+  <label for="chk" class="show-menu-btn">
+    <i class="fas fa-bars"></i>
+  </label>
+  <ul class="menu">
+    <a routerLink="/home">Početna</a>
+    <a routerLink="/item/pos">POS oprema</a>
+    <a routerLink="/item/software">Programi</a>
+    <a routerLink="/references">Referentna lista</a>
+    <a routerLink="/about">O nama</a>
+    <a routerLink="/contact">Kontakt</a>
+    <label for="chk" class="hide-menu-btn">
+      <i class="fas fa-times"></i>
+    </label>
+  </ul>
+  <div class="logged-user">
+    <div *ngIf="checkToken(); else loggedOut">
+      <span (click)="openUserProfile()"><i class="fas fa-user"></i><span class="logged-username" style="margin: 0">{{ username }}</span></span>|
+      <span (click)="openCart()"><i class="fas fa-shopping-cart" style="margin-left: 0"></i><span class="logged-cart" style="margin: 0">Košarica </span>({{ cartService.itemCount }})</span>
+      <button class="btn" style="background-color: #319be4; color: white" (click)="onLogout()">Odjava</button>
+    </div>
+    <ng-template #loggedOut>
+        <a routerLink="/login" class="btn" style="background-color: #319be4; color: white">Prijava</a>
+    </ng-template>
+  </div>
+</div>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

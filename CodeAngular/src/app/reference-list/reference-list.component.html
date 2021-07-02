@@ -1,0 +1,296 @@
+<div class="title-header">
+    <p>Referentna lista</p>
+</div>
+<div class="reference-content">
+    <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> -->
+    <hr>
+    <button class="reference-button toggle-retail" (click)="toggleRetail()">Referentna lista trgovina</button>
+    <div class="references-holder retail-references" *ngIf="showRetail">
+        <h3>Maloprodaja</h3>
+        <p>Almee j.d.o.o. - Čakovec</p>
+        <p>Slavica j.d.o.o. - Donji Kraljevec</p>
+        <p>Tehniko d.o.o. - Nedeščina</p>
+        <p>Dobranić Dom d.o.o. Prodavaonica "ONTARIO" - Čakovec</p>
+        <p>Titanio optika d.o.o. - Mursko Središće</p>
+        <p>Ziher d.o.o. - Varaždin</p>
+        <p>Trgovački obrt "LAV" Trgovina - Varaždin</p>
+        <p>Ekoherbalia d.o.o. - Zagreb</p>
+        <p>Navis-Marine d.o.o. - Čakovec</p>
+        <p>Ban TDL, trgovački obrt - Zagreb</p>
+        <p>Centar Moharić d.o.o. - Šenkovec</p>
+        <p>Auto-boj d.o.o. - Šenkovec</p>
+        <p>Autodijelovi CEC - Soblinec</p>
+        <p>Dorka d.o.o. "HAPPY" - Rab</p>
+        <p>Trgovina "BOUTIQU LAPAŽ" - Toplice Sv. Martin</p>
+        <p>Zoo Kokolo d.o.o. - Zagreb</p>
+        <p>Zoo Amazona d.o.o. - Zagreb</p>
+        <p>Yellow umbrella j.d.o.o. - Zagreb</p>
+        <p>Masao d.o.o. - Čakovec</p>
+        <p>L.M. Trgovina d.o.o. - Bulinac</p>
+        <p>Jumbo d.o.o. - Bjelovar</p>
+        <p>Tradicionalno.hr j.d.o.o. - Prelog</p>
+        <p>Zara d.o.o. - Zagreb</p>
+        <p>Zdrava navika d.o.o. - Zadar</p>
+        <hr>
+        <h3>Pekare</h3>
+        <p>Pekara Marjan - Šibenik</p>
+        <p>Pekara Voštarnica - Zadar</p>
+        <p>Pekara Fino j.d.o.o. - Čakovec</p>
+        <p>Pekara Pecollaj - Novska</p>
+        <p>Pekara Voštarnica - Zadar</p>
+        <p>Pekara Čakovec - Sveti Martin na Muri</p>
+        <p>Pekara Čakovec - Šenkovec</p>
+        <p>Pekara Čakovec - Mursko Središće</p>
+        <hr>
+        <h3>Proizvodnje</h3>
+        <p>Takač d.o.o. - Daruvar</p>
+        <p>Žmegač glazbalarski obrt - Varaždin</p>
+        <p>Memont-p d.o.o. - Čakovec</p>
+        <p>Pepelara Maronić d.o.o.- Novačka</p>
+        <p>Strojarstvo Škrobar - Stanetinec</p>
+        <p>Stolarska radionica "IVEK" - Domašinec</p>
+        <p>Strojobravarski obrt "METAL-KO" - Štrigova</p>
+        <p>Limarija Levačić - Novo Selo Rok</p>
+        <p>Muškatljin j.d.o.o. - Donji Vidovec</p>
+        <p>Stolarija A. Jurković - Čakovec</p>
+        <p>Brčić, proizvodnja sajli - Zagreb</p>
+        <p>Kuhinje Šarić j.d.o.o. - Sesvetski Kraljevec </p>
+        <p>Buba - Art obrt - Zadar</p>
+        <hr>
+        <h3>Odjeća i obuća</h3>
+        <p>Salon cipela "ROSSINI" - Zagreb</p>
+        <p>Salon "SUTILIS" - Zagreb</p>
+        <p>Trgovina obuće "Diva" - Čakovec</p>
+        <p>Trgovina obuće "Diva 2" - Čakovec</p>
+        <p>Trgovina obuće "Diva Shoes" - Varaždin</p>
+        <p>Trgovina obuće "Anita Diva" - Varaždin</p>
+        <p>Katarina obrt za trg. "BOUTIQUE GRACIA" - Zadar</p>
+        <p>Trgovina "Muškatljin 1" - Donja Dubrava</p>
+        <p>Trgovina "Muškatljin 1" - Prelog</p>
+        <hr>
+        <h3>Uslužne djelatnosti</h3>
+        <p>Manus Med d.o.o., Zagreb</p>
+        <p>Pacific Croatia d.o.o., Zagreb</p>
+        <p>RTV Servis Igor Sontor, Čakovec</p>
+        <p>Retro Bike j.d.o.o. Donji Hraščan</p>
+        <p>RED obrt za električne popravke motorinih vozila - Pula</p>
+        <p>Tapetarski obrt "ZEC" Rovinj</p>
+        <p>UMŽ Robert Kiralj, Hlapičina</p>
+        <p>Izazov d.o.o.   Auto škola Koledž, Čakovec</p>
+        <p>Zadruga Halycanum, Čakovec</p>
+        <p>Zaron d.o.o. Krapisnke Toplice</p>
+        <p>Versa Novus j.d.o.o. Dubrovnik</p>
+        <p>Praonica rublja Lotus - Zadar</p>
+        <p>Krojački obrt ANDREJA - Petrinja</p>
+        <p>Elektro – Panić d.o.o., Sveta Marij</p>
+        <hr>
+        <h3>Klesarstvo</h3>
+        <p>Klesarstvo Katusa d.o.o, Zadar</p>
+        <p>Klesarstvo Baranašić - Palovec</p>
+        <hr>
+        <h3>Zdravlje - Saloni njege - Frizersko kozmetičarske usluge</h3>
+        <p>Centar zdravlja Kadojić d.o.o. - Osijek</p>
+        <p>Natura sol d.o.o. Slane sobe, Zagreb</p>
+        <p>Studio ljepote Lena, Novo Selo Rok</p>
+        <p>Oaza ljepote j.d.o.o., Varaždin</p>
+        <p>Salon za njegu tijela "IVANA" - Zadar</p>
+        <p>Mandala Garden  j.d.o.o. "MADALA FRIZURA & KULTURA" -  Zagreb</p>
+        <p>Hair & Beauty Studio "TRISH" - Varaždin</p>
+        <p>Aleda j.d.o.o., Čakovec</p>
+        <p>Zurka d.o.o. Prelog</p>
+        <p>Nitea d.o.o. Koprivnica</p>
+        <p>Ivaž d.o.o. Zagreb</p>
+        <p>Majci d.o.o. Buje</p>
+        <p>Duge šiške j.d.o.o.</p>
+        <p>Kosa i tijelo d.o.o., Zagreb</p>
+        <p>Frizerski salon "Backstage", Čakovec</p>
+        <p>Frizerski salon "PETRA" Zadar</p>
+        <p>Frizerski salon "PETRA" Murter</p>
+        <p>Frizerski salon "GRACIA"</p>
+        <p>Frizerski salon "ĆUPERAK" Zagreb</p>
+        <p>Frizerski salon "MULIER"  Koprivnica</p>
+        <p>Frizerski salon "BLONDINA" Mursko Središće</p>
+        <p>Frizerski salon "ELIKA"</p>
+        <p>Frizerski studio "DANY" Buje</p>
+        <p>Frizer za Muškarce  vl, Dragutin Ploh</p>
+        <p>Frizerski salon "DE-PA" - Mursko Središće</p>
+        <p>Studio kose "Boris", Čakovec</p>
+        <p>Beauty centar "Božica" zagreb</p>
+        <p>Beauty centar "NICOLE", Velika Gorica</p>
+        <p>Fitnes Fcentar "BODI ART", Zagreb</p>
+        <p>Frizerski salon "Evia", Korpivnica</p>
+        <p>Obrt za pedikerske usluge "NATAŠA" - Delnice</p>
+        <p>Beauty Studio Time - Velika Gorica</p>
+        <hr>
+        <h3>Auto servisi</h3>
+        <p>DiT 1990 d.o.o. "AUTO SERVIS ALLIEN" - Pula</p>
+        <p>Terenski Autoservis Pribanič - Malinska</p>
+        <p>Autoservis Matanović - Sisak</p>
+        <p>Lani-Promet j.d.o.o. - Trnovec</p>
+        <p>Autostaklo S.A.S. - Varaždin</p>
+        <p>Auto Krehula - Pušćine</p>
+        <p>Milsauto d.o.o. - Osijek</p>
+        <p>Auto servis "Blažeka" - Donji Kraljevec</p>
+        <p>Auto Pfeifer - Štrigova</p>
+        <p>Vektor d.o.o. Čakovec</p>
+        <p>Auto Džebo d.o.o. - Zagreb</p>
+        <p>Autoservis Zdravko - Belica</p>
+        <p>Pit Stop j.d.o.o. - Čakovec</p>
+        <p>Vul-tro d.o.o. - Štrigova</p>
+        <p>Auto kompresija j.d.o.o. - Stupnički Obrež</p>
+        <p>Vulkanizacija Guma-mont - Zagreb</p>
+        <p>Vulkanizacija Škvorc - Novo Selo Rok</p>
+        <p>ACC j.d.o.o. - Osijek</p>
+        <p>Auto Đurkin - Belica</p>
+        <hr>
+        <h3>Veterinarska ambulanta</h3>
+        <p>Veterinarska Ambulanta Glumac - Čakovec</p>
+        <hr>
+        <h3>Građevinske djelatnosti</h3>
+        <p>Soboslikar Dražen Novak - Prelog</p>
+        <p>Fasade Božić d.o.o. - Žiškovec</p>
+        <p>Bratić d.o.o. - Sveti Križ</p>
+        <p>Opće građevinsko poduzeće d.o.o. - Prelog</p>
+        <hr>
+        <h3>Vinarije</h3>
+        <p>Vina Vuković j.d.o.o. - Sveti Urban</p>
+        <p>OPG Zdenka Medenjak "VINA MEDENJAK" - Sveti Urban</p>
+        <p>OPG Damir Ramić "VINA RAMIĆ" - Železna Gora</p>
+        <hr>
+        <h3>Prijevozništvo</h3>
+        <p>Autoprijevoznik Božidar Kušić - Breznica</p>
+        <p>Jambrošić Tours - Mursko Središće</p>
+        <p>Autoprijevoznik Tomšić Željko - Brezovec</p>
+        <hr>
+        <h3>Cvjećare</h3>
+        <p>Cvjećara "M.C.G." d.o.o. - Prelog</p>
+        <p>Cvjećara "Magnolia" - Domašinec</p>
+        <p>Cvjećara "Vesna" - Belica</p>
+        <p>Cvjećara "Mimoza" - Sv. Đurđ</p>
+        <p>Cvjećara  "Margareta" - Mursko Središće</p>
+        <p>Cvjećara "Apollona." Bat,Čakovec</p>
+        <p>Cvjećara   "LL" - Soblinec</p>
+        <p>Cvjećara "Emma" - Zadar</p>
+        <p>Cvjetni Atelijer "STUDIO FLORAMI" - Donji Kraljevec</p>
+        <p>Cvjećara "ROSSA" - Čakovec</p>
+        <p>Cvjećara "EMMA" - Zadar</p>
+    </div>
+    <button class="reference-button toggle-catering" (click)="toggleCatering()">Referentna lista ugostiteljstva</button>
+    <div class="references-holder catering-references" *ngIf="showCatering">
+        <h3>Caffe barovi</h3>
+        <p>Caffe bar "OLIMP" - Mursko Središće</p>
+        <p>Caffe bar "MANGO" - Sveta Marija</p>
+        <p>Caffe bar "ET" - Zadar</p>
+        <p>Caffe bar "TIN" - Zadar</p>
+        <p>Caffe bar "PAPILON" - Zadar</p>
+        <p>Caffe bar "VOX" - Zadar</p>
+        <p>Caffe bar "NA BREGU" - Prekopa</p>
+        <p>Caffe bar "MLADEN" - Zadar</p>
+        <p>Caffe bar "BLUE" -Zadar</p>
+        <p>Caffe bar "V GORICAJ" - Prekopa</p>
+        <p>Caffe bar "IMPERIA" - Korenica</p>
+        <p>Caffe bar "AMADEUS" - Korenica</p>
+        <p>Caffe bar "NIGHT CLUB LIFE" - Korenica</p>
+        <p>Caffe bar "MADONNA"- Donji Vidovec</p>
+        <p>Caffe bar "OPERA" - Donja Dubrava</p>
+        <p>Caffe bar "STARI MAROF" - Novo Selo Rok</p>
+        <p>Caffe bar "DOLIČEC" - Žiškovec</p>
+        <p>Caffe bar „TOMISLAV" - Osijek</p>
+        <p>Caffe bar „CHIARA" - Zagreb</p>
+        <p>Caffe bar „SWING" - Sveta Marija</p>
+        <p>Caffe bar "PICASSO" - Mursko Središće</p>
+        <p>Caffe bar "JOKER" - Čakovec</p>
+        <p>Caffe bar "OREŠKI" - Macinec</p>
+        <p>Caffe bar "STEFANO" - Koprivnica</p>
+        <p>Caffe bar "POLO" - Popovec</p>
+        <p>Caffe bar "MARKO POLO" - Zagreb</p>
+        <p>Caffe bar "KAJA" - Ljubešćica</p>
+        <p>Caffe bar "BRAVO BAR" - Ivanić Grad</p>
+        <p>Caffe bar "BRAVO BAR" - Dugo Selo</p>
+        <p>Caffe bar "ATLAS" - Cirkovljan</p>
+        <p>Caffe bar "BAZA" - Goričan</p>
+        <p>Caffe bar "ROK" - Draškovec</p>
+        <p>Caffe bar "VAHTA" - Donji Kraljevec</p>
+        <p>Caffe bar "FONTANA" - Donji Kraljevec</p>
+        <p>Caffe bar "ČIPSI" - Belica</p>
+        <p>Caffe bar "ČEVA" - Belica</p>
+        <p>Caffe bar "JAMA" - Mursko Središće</p>
+        <p>Caffe bar "CORO" - Čakovec</p>
+        <p>Caffe bar "STIL" - Donji Vidovec</p>
+        <p>Caffe bar "TRI BREZE" - Čakovec</p>
+        <p>Caffe bar "CENTAR" - Gornji Mihaljevec</p>
+        <p>Caffe bar "MARATON" - Gornji Mihaljevec</p>
+        <p>Caffe bar "MARATON 2" - Gornji Mihaljevec</p>
+        <p>Caffe bar "GRAN PASTEL" - Zagreb</p>
+        <p>Caffe bar "KUM"  - Mačkovec</p>
+        <p>Caffe bar "SCOOL"  - Zagreb</p>
+        <p>Caffe bar "SERMONIA"  - Zagreb</p>
+        <p>Caffe bar "KRČMA KIŠ"  - Čakovec</p>
+        <p>Caffe bar "PALMA"  - Pušćine</p>
+        <p>Caffe bar "KOD STAROG PEJAKA" - V. Gorica</p>
+        <p>Caffe bar "KOKUZ" - Korenica</p>
+        <p>Caffe bar "EXIT" - Zadar</p>
+        <p>Caffe bar "CORNER" - Kuršanec</p>
+        <p>Caffe bar "CORNER" - Sv. Juraj u Trnju</p>
+        <p>Caffe bar "SWING" - Sveta Marija</p>
+        <hr>
+        <h3>Restorani</h3>
+        <p>Restoran "KRISTAL" - Čakovec</p>
+        <p>Restoran "BAROK" - Čakovec</p>
+        <p>Restoran "LAV" - Varaždin</p>
+        <p>Restoran "PORTICO" - Malinska</p>
+        <p>Restoran "CENTRAL PARK"- Čakovec</p>
+        <p>Restoran "TURIZAM ROKI" - Radovec</p>
+        <p>Restoran "LANTERNA" - Mandre</p>
+        <p>Restoran "SMOKVA" - Pag</p>
+        <p>Restoran "LOKVARKA" - Lokve</p>
+        <p>Restoran "BELVEDER" - Pag</p>
+        <p>Restoran "Pansion Legrađanka" - Pag</p>
+        <p>Restoran "SHOBY" - Auto kamp Šimuni, Pag</p>
+        <p>Restoran "LOGGIA" - Oprtalj</p>
+        <p>Restoran "TAMARIS" - Čižići</p>
+        <hr>
+        <h3>Kavane</h3>
+        <hr>
+        <p>Kavana "K JELENI"- Gornja Dubrava</p>
+        <p>Kavana "MONIKA"- Železna Gora</p>
+        <hr>
+        <h3>Pizzerie</h3>
+        <p>Pizzeria "PORTO" - Čakovec</p>
+        <p>Pizzeria "GARFIELD" - Zagreb</p>
+        <p>Pizzeria "VURI" - Mursko Središće</p>
+        <hr>
+        <h3>Trattorie</h3>
+        <p>Trattoria  "ROSSA" - Prelog</p>
+        <hr>
+        <h3>Bistroi</h3>
+        <p>Bistro  "TAHITI" - Mursko središće</p>
+        <p>Bistro  "ALBATROS" - Štefanec</p>
+        <p>Bistro  "NOVI SVIJET" - Hodošan</p>
+        <hr>
+        <h3>Cioccolateria</h3>
+        <p>Cioccolateria "EVA" - Zadar</p>
+        <hr>
+        <h3>Konobe</h3>
+        <p>Konoba "MASLENICA" - Maslenica</p>
+        <hr>
+        <h3>Gostione</h3>
+        <p>Gostiona "MLIN" - Kotoriba</p>
+        <hr>
+        <h3>Kleti</h3>
+        <p>Klet "IZLETIŠTE GORIČANEC" - Sveti Martin na Muri</p>
+        <hr>
+        <h3>Pansioni</h3>
+        <p>Pansion  "PANSION AS" - Rešetari</p>
+        <p>Pansion "LEGRAĐANKA" - Legrad</p>
+        <hr>
+        <h3>Fast food-ovi</h3>
+        <p>Fast Food "PAJDAŠ" - Čakovec</p>
+        <p>Fast Food "GALAXY" - Zagreb</p>
+        <p>FAST Food "KING" - Čakovec</p>
+        <p>FAST Food "KOD BARBE" - Vir</p>
+        <hr>
+        <h3>Catering</h3>
+        <p>Catering Benjamin j.d.o.o. - Ivanovec</p>
+    </div>
+</div>

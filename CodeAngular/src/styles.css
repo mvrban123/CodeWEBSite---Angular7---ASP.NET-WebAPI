@@ -1,0 +1,289 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.header {
+  font-family: 'Oswald', sans-serif;
+  height: 100px;
+  background: transparent;
+  padding: 0px 20px;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.carousel-control-prev:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-control-next:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+  line-height: 100px;
+  float: left;
+}
+
+.menu {
+  line-height: 100px;
+  float: left;
+}
+
+.menu a {
+  line-height: 100px;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 15px;
+  transition:  0.2s;
+}
+
+.menu a:hover {
+  color: #3498db;
+}
+
+.show-menu-btn, .hide-menu-btn {
+  font-size: 30px;
+  transition:  0.2s;
+  cursor: pointer;
+  display: none;
+}
+
+.show-menu-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  background-color: #319be4;
+  padding: 15px;
+  color: white;
+  z-index: 1000;
+  opacity: 0.9;
+}
+
+.show-menu-btn:hover,
+.hide-menu-btn:hover {
+  color: #3498db;
+}
+
+div.form-group {
+  font-family: 'Oswald', sans-serif;
+}
+
+.content {
+  padding: 20px;
+}
+
+.logged-user {
+  line-height: 100px;
+  float: right;
+}
+
+.logged-user * {
+  margin: 0 10px;
+}
+
+#chk {
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+input.ng-touched.ng-valid:not(.ignore-ng) {
+  border-width: 2px;
+  border-color: green;
+}
+
+input.ng-touched.ng-invalid:not(.ignore-ng) {
+  border-width: 2px;
+  border-color: red;
+}
+
+/* Confirm dialog */
+.confirm-dialog #close-icon {
+  margin-left: auto;
+  order: 2;
+  font-weight: bold;
+}
+
+.confirm-dialog #close-icon:hover {
+  cursor: pointer;
+}
+
+.confirm-dialog .content-container {
+  margin: 5px 5px 15px 5px;
+  display: flex;
+}
+
+.confirm-dialog .content-span {
+  margin-top: 15px;
+}
+
+.confirm-dialog #yes-button {
+  height: 50%;
+  width: 50%;
+  background-color: #3498db;
+  color:white;
+  border-radius: 0px;
+}
+
+.confirm-dialog #no-button {
+  height: 50%;
+  width: 50%;
+  background-color: salmon;
+  color:white;
+  border-radius: 0px;
+}
+
+.control-button {
+  padding: 5px 20px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.control-button:hover {
+  transition: 0.4s;
+}
+
+.control-button-red {
+  background-color: salmon;
+}
+
+.control-button-red:hover {
+  background-color: #e17366;
+}
+
+.control-button-orange {
+  background-color: #ebc852;
+}
+
+.control-button-orange:hover {
+  background-color: #d9b334;
+}
+
+.control-button-blue {
+  background-color: #319be4;
+}
+
+.control-button-green:hover {
+  background-color: #2390db;
+}
+
+.control-button-green {
+  background-color: #3fbf61;
+}
+
+.control-button-green:hover {
+  background-color: #2bad4e;
+}
+
+.control-button-purple {
+  background-color: #b85fd9;
+}
+
+.control-button-purple:hover {
+  background-color: #a03fc4;
+}
+
+.control-button-disabled {
+  background-color: gray;
+}
+
+.status-blue {
+  color: rgba(0, 102, 255, 0.753);
+}
+
+.status-green {
+  color: #37b84d;
+}
+
+.status-orange {
+  color: orange;
+}
+
+.status-red {
+  color: salmon;
+}
+
+@media screen and (max-width:1122px) 
+{
+  .show-menu-btn, .hide-menu-btn {
+    display: block;
+  }
+
+  .menu {
+    color: white;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+    opacity: 0.9;
+  }
+
+  .menu a {
+    display: block;
+    color: white;
+    padding:  10px;
+  }
+
+  .hide-menu-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  #chk:checked ~ .menu {
+    right: 0;
+  }
+
+  #chk:checked ~ .show-menu-btn {
+    visibility: hidden;
+  }
+}
+
+@media(max-width: 500px)
+{
+  .header {
+    height: 80px;
+    padding: 0 0 0 15px;
+  }
+
+  .logo {
+    line-height: 80px;
+    font-size: 1.4rem;
+  }
+  
+  .menu {
+    line-height: 80px;
+  }
+  
+  .menu a {
+    line-height: 80px;
+    padding: 0 15px;
+  }
+
+  .logged-user {
+    line-height: 80px;
+  }
+
+  .logged-user button {
+    display: none;
+  }
+
+  .logged-cart {
+    display: none;
+  }
+
+  .logged-username {
+    display: none;
+  }
+}

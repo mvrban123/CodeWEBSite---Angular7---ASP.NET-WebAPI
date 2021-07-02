@@ -1,0 +1,9 @@
+" partners.id_grad AS id_kupac_grad," +
+" partners.id_partner AS sifra_kupac," +
+" partners.napomena AS napomena_tvrtka," +
+" partners.oib_polje AS string5, " +
+" zemlja.zemlja AS kupac_drzava, " +
+partners.ime_tvrtke AS kupac_tvrtka," +
+" partners.adresa AS kupac_adresa," +
+
+" LEFT JOIN zemlja ON zemlja.id_zemlja=partners.id_zemlja";

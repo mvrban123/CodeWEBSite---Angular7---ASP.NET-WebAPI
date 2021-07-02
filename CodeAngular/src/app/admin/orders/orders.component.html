@@ -1,0 +1,43 @@
+<div class="orders-content">
+    <label style="font-size: 18px;">Status:</label>
+    <select style="margin-left: 5px; width: 150px; padding: 2px" (change)="selectedStatusChange($event.target.value)">
+        <option value="0">-- Svi statusi --</option>
+        <option value="1">Na čekanju</option>
+        <option value="2">U obradi</option>
+        <option value="3">Spremno za isporuku</option>
+    </select>
+    <table class="orders-table" *ngIf="orders.length > 0; else noOrders;">
+        <thead>
+            <tr>
+                <th>Br.</th>
+                <th>Datum</th>
+                <th>Korisnik</th>
+                <th>Status</th>
+                <th>Dostava</th>
+                <th>Kontrola</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of filteredOrders; index as i">
+                <td style="width: 10%;">{{ i + 1 }}</td>
+                <td style="width: 30%;" (click)="openOrder(order)">{{ order.OrderDate | date: 'dd.MM.yyyy - HH:mm' }}</td>
+                <td>{{ order.User.FirstName + " " + order.User.Surname }}</td>
+                <td [class.status-orange]="order.Status.Id == 1" 
+                [class.status-blue]="order.Status.Id == 2"
+                [class.status-green]="order.Status.Id == 3"
+                (click)="openChangeStatusDialog(order)">{{ order.Status.Name }}</td>
+                <td [class.status-green]="order.Delivery"
+                [class.status-red]="!order.Delivery">{{ order.Delivery ? "DA" : "NE" }}</td>
+                <td>
+                    <button class="control-button control-button-blue" (click)="openFileUploadDialog(order.Id)"><i class="fas fa-upload"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-template #noOrders>
+        <p style="display: block; text-align: center; font-size: 20px; margin-top: 15px;">
+            Trenutno ne postoji niti jedna narudžba.
+        </p>
+    </ng-template>
+</div>
+<div id="order_image"></div>

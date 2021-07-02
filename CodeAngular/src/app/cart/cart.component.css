@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+* {
+    font-family: 'Oswald', sans-serif;
+}
+
+.title-header {
+    width: 100%;
+    height: 100px;
+    background-color: #319be4;
+}
+
+.title-header p {
+    color: white;
+    font-size: 22px;
+    margin-left: 30px;
+    line-height: 100px;
+}
+
+.cart-grid {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.stock-warning {
+    width: 95%;
+    line-height: 50px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    color: #ff4760;
+    border: 1px solid #ff4760;
+    border-radius: 5px;
+}
+
+/* Items */
+.cart-table {
+    width: 95%;
+}
+
+.cart-table thead th:not(:first-child) {
+    padding: 10px;
+    text-align: center;
+}
+
+.cart-table tbody td:not(:first-child) {
+    padding: 15px;
+    text-align: center;
+}
+
+.cart-table tbody td {
+    font-size: 17px;
+}
+
+.cart-table tbody tr {
+    margin-bottom: 50px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.cart-table tbody input[type="button"] {
+    background-color: #319be4;
+    color: white;
+    border-style: solid;
+    border-color: #319be4;
+    font-weight: bold;
+}
+
+.cart-item-amount {
+    height: 100%;
+    width: 40px;
+    text-align: center;
+}
+
+.cart-item-name {
+    padding-left: 10px;
+}
+
+.table-header {
+    font-size: 20px;
+    border-bottom: 3px solid silver;
+    padding-bottom: 10px;
+}
+
+/* Removes up/down arrows in input number field */
+.cart-item-amount::-webkit-inner-spin-button,
+.cart-item-amount::-webkit-outer-spin-button
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+/* Order */
+.order-table {
+    width: 100%;
+}
+
+.order-table tr {
+    border-bottom: 1px solid gainsboro;
+}
+
+.order-table thead th {
+    padding: 10px;
+}
+
+.order-table tbody td {
+    padding: 10px;
+}
+
+.second-cell {
+    text-align: right;
+}
+
+.cart-order button {
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+    background-color: #319be4;
+}
+
+.no-cart-items {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.no-cart-items span {
+    font-size: 20px;
+}
+
+.no-cart-items a {
+    margin-top: 15px;
+    color: white;
+    background-color: #319be4;
+}
+
+.no-cart-items a:hover {
+    background-color: #52b1f2;
+    transition: 0.4s;
+}
+
+.out-of-stock {
+    background-color: #ffd1d1;
+}

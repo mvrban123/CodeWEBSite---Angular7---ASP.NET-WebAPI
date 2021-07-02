@@ -1,0 +1,51 @@
+<div class="user-details-content">
+    <div class="user-details-grid">
+        <h4>Podaci o računu</h4>
+        <hr>
+        <div style="width: 100%; margin-bottom: 1rem">
+            <div style="width: 50%; display: inline-block; padding-right: 5px;">
+                <label>Ime</label>
+                <input class="form-control ignore-ng" [(ngModel)]="userService.loggedUser.FirstName" readonly>
+            </div>
+            <div style="width: 50%; display: inline-block;">
+                <label>Prezime</label>
+                <input class="form-control ignore-ng" [(ngModel)]="userService.loggedUser.Surname" readonly>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Korisničko ime</label>
+            <input class="form-control ignore-ng" [(ngModel)]="userService.loggedUser.UserName" readonly>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input class="form-control ignore-ng" [(ngModel)]="userService.loggedUser.Email" readonly>
+        </div>
+    </div>
+    <div class="user-details-grid">
+        <h4>Podaci tvrtke</h4>
+        <hr>
+        <div class="form-group">
+            <label>Ime tvrtke</label>
+            <input class="form-control ignore-ng" [(ngModel)]="company.Name" readonly>
+        </div>
+        <div class="form-group">
+            <label>OIB</label>
+            <input class="form-control ignore-ng" [(ngModel)]="company.Oib" readonly>
+        </div>
+        <div class="form-group">
+            <label>Adresa</label>
+            <input class="form-control ignore-ng" [(ngModel)]="company.Address" readonly>
+        </div>
+        <div style="width: 100%; margin-bottom: 1rem">
+            <div style="width: 50%; display: inline-block; padding-right: 5px;">
+                <label>Poštanski broj</label>
+                <input class="form-control ignore-ng" [(ngModel)]="company.PostalNumber" readonly>
+            </div>
+            <div style="width: 50%; display: inline-block;">
+                <label>Grad</label>
+                <input class="form-control ignore-ng" [(ngModel)]="company.City" readonly>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>

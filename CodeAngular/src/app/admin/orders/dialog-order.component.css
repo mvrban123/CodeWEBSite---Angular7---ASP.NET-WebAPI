@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+* {
+    font-family: 'Oswald', sans-serif;
+}
+
+.order-logo {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+.order-logo img {
+    height: 100%;
+}
+
+.order-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.order-companies {
+    width: 100%;
+}
+
+.order-companies .order-receiver {
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+    font-size: 12px;
+}
+
+.order-companies .order-sender {
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+    font-size: 10px;
+}
+
+.order-sender table {
+    width: 100%;
+}
+
+.order-sender table tr .sender-left {
+    width: 20%;
+    font-weight: bold;
+}
+
+.order-sender table tr .sender-right {
+    width: 80%;
+    text-align: right;
+}
+
+.order-details {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.order-details .order-details-number {
+    width: 100%; 
+    margin: 0;
+    border-top: 1px solid black; 
+    border-bottom: 1px solid black;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.order-details .order-details-section {
+    display: inline-block;
+    padding: 5px;
+    width: 50%;
+    margin-top: 5px;
+    font-size: 10px;
+}
+
+.order-items {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    font-size: 10px;
+    text-align: center;
+}
+
+.order-items tr th {
+    padding: 5px;
+}
+
+.totals {
+    margin-top: 10px;
+    margin-left: auto;
+    width: 40%;
+    font-size: 11px;
+}
+
+.totals table {
+    width: 100%;
+}
+
+.additional-info {
+    width: 100%;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    border-top: 1px solid black;
+    font-size: 10px;
+    text-align: center;
+}
+
+.footer p {
+    padding: 5px;
+    margin: 0;
+}

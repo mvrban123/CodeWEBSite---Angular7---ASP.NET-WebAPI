@@ -1,0 +1,30 @@
+<div class="users-content">
+    <button class="new-user-button" (click)="openDialog()">Novi korisnik</button>
+    <table class="users-table" *ngIf="users.length > 0; else noUsers;">
+        <thead>
+            <tr>
+                <th>Br.</th>
+                <th>Tvrtka</th>
+                <th>Korisničko ime</th>
+                <th>Email</th>
+                <th>Kontrola</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users; index as i">
+                <td>{{ i + 1 }}</td>
+                <td (click)="openDialog(user)">{{ user.Company.Name }}</td>
+                <td style="width: 20%;">{{ user.UserName }}</td>
+                <td>{{ user.Email }}</td>
+                <td style="width: 15%">
+                    <button class="control-button" (click)="deleteUser(user.Id)"><i class="fas fa-trash-alt"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-template #noUsers>
+        <p style="display: block; text-align: center; font-size: 20px; margin-top: 15px;">
+            Učitavanje podataka...
+        </p>
+    </ng-template>
+</div>

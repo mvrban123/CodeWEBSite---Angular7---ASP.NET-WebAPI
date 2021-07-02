@@ -1,0 +1,83 @@
+<h3>Novi korisnik</h3>
+<hr>
+<form [formGroup]="formModel" autocomplete="off" (submit)="onSubmit()">
+    <div class="grid-container">
+        <div class="grid-user-info" formGroupName="UserInfo">
+            <div class="form-group">
+                <label>Ime</label>
+                <input class="form-control" formControlName="FirstName">
+                <span class="text-danger" *ngIf="formModel.get('UserInfo.FirstName').touched && formModel.get('UserInfo.FirstName').errors?.required">Ime je obavezno polje.</span>
+            </div>
+            <div class="form-group">
+                <label>Prezime</label>
+                <input class="form-control" formControlName="Surname">
+                <span class="text-danger" *ngIf="formModel.get('UserInfo.Surname').touched && formModel.get('UserInfo.Surname').errors?.required">Prezime je obavezno polje.</span>
+            </div>
+            <hr>
+            <div class="form-group">
+                <label>Korisničko ime</label>
+                <input class="form-control" formControlName="UserName">
+                <span class="text-danger" *ngIf="formModel.get('UserInfo.UserName').touched && formModel.get('UserInfo.UserName').errors?.required">Korisničko ime je obavezno polje.</span>
+                <span class="text-danger" *ngIf="formModel.get('UserInfo.UserName').touched && formModel.get('UserInfo.UserName').errors?.minlength">Korisničko ime mora sadržavati minimalno 3 znaka.</span>
+            </div>
+            <div class="form-group">
+                <label>E-mail</label>
+                <input class="form-control" formControlName="Email">
+                <span class="text-danger" *ngIf="formModel.get('UserInfo.Email').touched && formModel.get('UserInfo.Email').errors?.required">E-mail je obavezno polje.</span>
+                <span class="text-danger" *ngIf="formModel.get('UserInfo.Email').touched && formModel.get('UserInfo.Email').errors?.email">E-mail format nije ispravan.</span>
+            </div>
+            <div class="form-group">
+                <label>Vrsta korisnika</label>
+                <div class="role-select">
+                    <select formControlName="Role">
+                        <option [ngValue]="null" disabled>Odaberi vrstu korisnika</option>
+                        <option *ngFor="let userType of userTypes" [ngValue]="userType.Name">{{ userType.Name }}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group" *ngIf="user == null">
+                <label>Lozinka</label>
+                <input type="password" class="form-control" formControlName="Password">
+                <span class="text-danger" *ngIf="formModel.get('UserInfo.Password').touched && formModel.get('UserInfo.Password').errors?.required">Lozinka je obavezno polje.</span>
+                <span class="text-danger" *ngIf="formModel.get('UserInfo.Password').touched && formModel.get('UserInfo.Password').errors?.minlength">Lozinka mora sadržavati minimalno 4 znaka.</span>
+            </div>
+            <div class="form-group" *ngIf="user == null">
+                <label>Ponovljena lozinka</label>
+                <input type="password" class="form-control" formControlName="ConfirmPassword">
+                <span class="text-danger" *ngIf="formModel.get('UserInfo.ConfirmPassword').touched && formModel.get('UserInfo.ConfirmPassword').errors?.required">Ponovljena lozinka je obavezno polje.</span>
+            </div>
+        </div>
+        <div class="grid-company-info" formGroupName="CompanyInfo">
+            <div class="form-group">
+                <label>Ime tvrtke</label>
+                <input class="form-control" formControlName="CompanyName">
+                <span class="text-danger" *ngIf="formModel.get('CompanyInfo.CompanyName').touched && formModel.get('CompanyInfo.CompanyName').errors?.required">Ime tvrtke je obavezno polje.</span>
+            </div>
+            <div class="form-group">
+                <label>OIB</label>
+                <input class="form-control" formControlName="Oib">
+                <span class="text-danger" *ngIf="formModel.get('CompanyInfo.Oib').touched && formModel.get('CompanyInfo.Oib').errors?.required">OIB tvrtke je obavezno polje.</span>
+                <span class="text-danger" *ngIf="formModel.get('CompanyInfo.Oib').touched && formModel.get('CompanyInfo.Oib').errors?.minlength">OIB tvrtke mora sadržavati 11 znakova.</span>
+            </div>
+            <div class="form-group">
+                <label>Adresa</label>
+                <input class="form-control" formControlName="Address">
+                <span class="text-danger" *ngIf="formModel.get('CompanyInfo.Address').touched && formModel.get('CompanyInfo.Address').errors?.required">Adresa tvrtke je obavezno polje.</span>
+            </div>
+            <div style="width: 100%;">
+                <div style="width: 50%; display: inline-block; padding-right: 5px;">
+                    <label>Poštanski broj</label>
+                    <input class="form-control" formControlName="PostalNumber">
+                </div>
+                <div style="width: 50%; display: inline-block;">
+                    <label>Grad</label>
+                    <input class="form-control" formControlName="City">
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="submit-button-group">
+        <button class="submit-button" type="submit" [disabled]="formModel.invalid">Spremi</button>
+    </div>
+</form>

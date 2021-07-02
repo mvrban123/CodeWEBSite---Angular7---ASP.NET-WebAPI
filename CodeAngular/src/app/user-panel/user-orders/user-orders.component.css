@@ -1,0 +1,82 @@
+.user-orders-content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.orders-table {
+    width: 100%;
+    text-align: center;
+}
+
+.orders-table thead {
+    background-color: #319be4;
+    color: white;
+}
+
+.orders-table thead tr th {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid white;
+}
+
+.orders-table tbody tr {
+    cursor: pointer;
+    border-bottom: 1px solid gainsboro;
+}
+
+.orders-table tbody tr:hover {
+    background-color: #d6eeff;
+}
+
+.orders-table tbody tr td {
+    padding: 10px;
+}
+
+.no-orders {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.no-orders span {
+    font-size: 20px;
+}
+
+.no-orders a {
+    margin-top: 15px;
+    color: white;
+    background-color: #319be4;
+}
+
+.no-orders a:hover {
+    background-color: #52b1f2;
+    transition: 0.4s;
+}
+
+.control-button {
+    padding: 5px 20px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.control-button-blue {
+    background-color: #4b92c4;
+}
+
+.control-button-blue:hover {
+    background-color: #327bad;
+}
+
+.control-button-red {
+    background-color: salmon;
+}
+
+.control-button-red:hover {
+    background-color: #e17366;
+}
+
+.control-button:hover {
+    transition: 0.4s;
+}

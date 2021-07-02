@@ -1,0 +1,65 @@
+<div class="title-header">
+    <p>Košarica</p>
+</div>
+<hr>
+<div class="cart-grid">
+    <div class="cart-items" *ngIf="cartService.cartItems.length > 0; else noCartItems">
+        <div class="stock-warning" *ngIf="cartService.hasOutOfStock">
+            <span>U košarici postoje proizvodi čija je količina veća od količine na skladištu.</span>
+        </div>
+        <table class="cart-table">
+            <thead class="table-header">
+                <tr>
+                    <th class="cart-item-name">Proizvod</th>
+                    <th>Cijena</th>
+                    <th>Količina</th>
+                    <th>Ukupno</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cartItem of cartService.cartItems" [class.out-of-stock]="cartItem.Amount > cartItem.Item.StorageAmount && cartItem.Item.ItemTypeId == 1">
+                    <td class="cart-item-name">{{ cartItem.Item.Name }}</td>
+                    <td>{{ cartItem.Item.Price }} kn</td>
+                    <td>
+                        <input type="button" value="-" (click)="cartItemDecrease(cartItem.Item, $event)" style="border-bottom-left-radius: 5px; border-top-left-radius: 5px;">
+                        <input class="cart-item-amount" type="number" [value]="cartItem.Amount" min="1" (input)="setAmount($event, cartItem)">
+                        <input type="button" value="+" (click)="cartItemIncrease(cartItem.Item)"style="border-bottom-right-radius: 5px; border-top-right-radius: 5px;">
+                    </td>
+                    <td>{{ cartItem.Item.Price * cartItem.Amount }} kn</td>
+                    <td style="width: 5%;"><button class="btn btn-danger" (click)="removeItem(cartItem.Item)">X</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <ng-template class="cart-items" #noCartItems>
+        <div class="no-cart-items">
+            <span>Trenutno nemate niti jedan proizvod u košarici.</span>
+            <br>
+            <a routerLink="/item/pos" class="btn">Idi na prodaju</a>
+        </div>
+    </ng-template>
+    <div class="cart-order">
+        <table class="order-table">
+            <thead class="table-header">
+                <tr>
+                    <th>Sveukupno</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="first-cell">Ukupno</td>
+                    <td class="second-cell">{{ cartService.totalPrice }} kn</td>
+                </tr>
+                <tr>
+                    <td class="first-cell">Dostava</td>
+                    <td class="second-cell">
+                        <input [(ngModel)]="delivery" type="checkbox" />
+                        Uključena dostava
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="float:right; margin: 0; padding-top: 10px; font-style: italic; font-size: 15px;">Dostava je besplatna za narudžbe od 3000 kn i više + PDV.</p>
+        <button type="button" class="btn" [disabled]="cartService.cartItems.length == 0" (click)="sendOrder()">Naruči</button>
+    </div>
+</div>

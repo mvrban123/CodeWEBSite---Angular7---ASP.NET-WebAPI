@@ -1,0 +1,107 @@
+<div class="order-content" #content>
+    <div class="order-logo">
+        <img src="../../../assets/img/logo.jpg">
+    </div>
+    <div class="order-companies">
+        <div class="order-receiver">
+            {{ companyService.company.Name }}<br>
+            {{ companyService.company.Address }}<br>
+            {{ companyService.company.PostalNumber }}&nbsp;{{ companyService.company.City }}
+        </div>
+        <div class="order-sender">
+            <table>
+                <tr>
+                    <td class="sender-left"></td>
+                    <td class="sender-right">
+                        <span>Code - iT j.d.o.o.</span><br>
+                        <span>Radnička 29, Belica 40319</span><br>
+                        <span>Tel: 091 246 8944</span><br>
+                        <span>Email: dejan@code-it.hr</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sender-left">OIB:</td>
+                    <td class="sender-right">47165970760</td>
+                </tr>
+                <tr>
+                    <td class="sender-left">VAR ID no.:</td>
+                    <td class="sender-right">HR47165970760</td>
+                </tr>
+                <tr>
+                    <td class="sender-left">Poslovnica:</td>
+                    <td class="sender-right">
+                        <span>Code - iT j.d.o.o.</span><br>
+                        <span>Radnička 29</span><br>
+                        <span>Belica 40319</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sender-left">Operater:</td>
+                    <td class="sender-right">Dejan Vibović</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="order-details">
+        <p class="order-details-number">Narudžba {{ order.Id }}</p>
+        <div class="order-details-section">
+            <span><b>OIB / VAR ID no.</b></span><br>
+            <span>{{ companyService.company.Oib }}</span>
+        </div>
+        <div class="order-details-section">
+            <span><b>Datum narudžbe:</b></span><br>
+            <span>{{ order.OrderDate | date: 'dd.MM.yyyy. HH:mm' }}</span>
+        </div>
+    </div>
+    <table class="order-items">
+        <thead>
+            <tr>
+                <th style="text-align: left">RN</th>
+                <th>Naziv</th>
+                <th>Količina</th>
+                <th>Cijena</th>
+                <th>PDV</th>
+                <th style="text-align: right">Iznos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of order.OrderItems; index as i">
+                <td style="text-align: left; padding-left: 8px;">{{ i + 1 }}</td>
+                <td>{{ item.Item.Name }}</td>
+                <td>{{ item.Amount }}</td>
+                <td>{{ item.Item.Price }} kn</td>
+                <td>25%</td>
+                <td style="text-align: right">{{ (item.Item.Price * item.Amount) * 1.25 }} kn</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="totals">
+        <table>
+            <tr>
+                <td><b>Ukupno bez PDV-a:</b></td>
+                <td style="text-align: right;"><b>{{ totalAmount }} kn</b></td>
+            </tr>
+            <tr style="border-bottom: 1px solid black;">
+                <td><b>Ukupno PDV:</b></td>
+                <td style="text-align: right;"><b>{{ totalAmount * 0.25 }} kn</b></td>
+            </tr>
+            <tr style="margin-top: 10px;">
+                <td><b>UKUPNO ZA PLATITI:</b></td>
+                <td style="text-align: right;"><b>{{ totalAmount * 1.25 }} kn</b></td>
+            </tr>
+        </table>
+    </div>
+    <div class="additional-info">
+        <span style="font-size: 10px;">Plaćanje: Transakcijski račun</span><br>
+        <span style="font-size: 12px;"><b>Model / Poziv na broj: {{order.Id}}{{ order.OrderDate | date: 'yyyy' }}-{{ companyService.company.Id }}</b></span><br>
+        <span style="font-size: 10px;">IBAN: HR31982749214189247</span>
+        <br>
+        <br>
+        <br>
+        <span style="font-size: 12px;">OVO NIJE FISKALIZIRAN RAČUN</span>
+    </div>
+    <div class="footer">
+        <p>Tu ide footer</p>
+    </div>
+</div>
+<div id="order_image"></div>

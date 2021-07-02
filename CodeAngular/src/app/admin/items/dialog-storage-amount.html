@@ -1,0 +1,17 @@
+<div class="storage-amount-content">
+    <div class="set-amount">
+        <label>Postavi vrijednost</label>
+        <input type="number" [(ngModel)]="storageAmount">
+        <button class="control-button control-button-blue" (click)="setStorageAmount()">Postavi</button>
+    </div>
+    <hr>
+    <div class="calculate-amount">
+        <label>Količina</label>
+        <input type="number" [(ngModel)]="calculateAmount">
+        <select (change)="onChangeCalculateValue($event.target.value)">
+            <option [value]="1">Dodaj</option>
+            <option [value]="2">Oduzmi</option>
+        </select>
+        <button class="control-button control-button-blue" (click)="calculateStorageAmount()">Potvrdi</button>
+    </div>
+</div>

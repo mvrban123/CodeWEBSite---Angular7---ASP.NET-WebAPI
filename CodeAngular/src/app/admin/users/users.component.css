@@ -1,0 +1,63 @@
+.users-content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.users-content .new-user-button {
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    background-color: #319be4;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.users-content .new-user-button:hover {
+    background-color: #52b1f2;
+    transition: 0.4s;
+}
+
+.users-table {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.users-table thead {
+    background-color: #319be4;
+    color: white;
+}
+
+.users-table thead tr th {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid white;
+}
+
+.users-table tbody tr {
+    cursor: pointer;
+    border-bottom: 1px solid gainsboro;
+}
+
+.users-table tbody tr:hover {
+    background-color: #d6eeff;
+}
+
+.users-table tbody tr td {
+    padding: 10px;
+}
+
+.control-button {
+    padding: 5px 20px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: salmon;
+}
+
+.control-button:hover {
+    background-color: #e17366;
+    transition: 0.4s;
+}

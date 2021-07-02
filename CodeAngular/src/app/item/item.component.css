@@ -1,0 +1,57 @@
+.items-holder {
+    width: 100%;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid gainsboro;
+}
+
+.item .item-image {
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+}
+
+.item .item-text {
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+    border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+}
+
+.item .item-price {
+    display: inline-block;
+    position: relative;
+}
+
+.item .item-price .item-price-text {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    top: 0;
+    right: 0;
+}
+
+.item .item-price button {
+    background-color: #319be4; 
+    color: white;
+    position: absolute;
+    width: 95%;
+    bottom: 0;
+    right: 0;
+}
+
+.item .item-price button:hover {
+    border: 1px solid #319be4;
+    color: #319be4;
+    background-color: white;
+    transition: 0.4s;
+}

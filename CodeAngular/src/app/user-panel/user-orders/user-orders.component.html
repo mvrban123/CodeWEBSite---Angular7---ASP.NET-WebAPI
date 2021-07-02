@@ -1,0 +1,51 @@
+<div class="user-orders-content">
+    <table *ngIf="userOrders.length > 0; else noOrders" class="orders-table">
+        <thead>
+            <tr>
+                <th>Br.</th>
+                <th>Datum</th>
+                <th>Status</th>
+                <th>Dostava</th>
+                <th>Ponuda</th>
+                <th>Račun</th>
+                <th>Jamstveni list</th>
+                <th>Kontrola</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of userOrders; index as i">
+               <td>{{ i + 1 }}</td>
+               <td (click)="openOrderDialog(order, false)">{{ order.OrderDate | date: 'dd.MM.yyyy - HH:mm' }}</td>
+               <td [class.status-orange]="order.Status.Id == 1" 
+               [class.status-blue]="order.Status.Id == 2"
+               [class.status-green]="order.Status.Id == 3">{{ order.Status.Name }}</td>
+               <td [class.status-green]="order.Delivery"
+               [class.status-red]="!order.Delivery"
+               >{{ order.Delivery ? "DA" : "NE" }}</td>
+                <td style="width: 10%;">
+                    <button class="control-button control-button-blue" (click)="openOrderDialog(order, true)"><i class="fab fa-buffer"></i></button>
+                </td>
+                <td style="width: 10%;">
+                    <button class="control-button" (click)="downloadFile(order, 'Invoice')"
+                    [class.control-button-green]="order.InvoiceLocation != null"
+                    [class.control-button-disabled]="order.InvoiceLocation == null" [disabled]="order.InvoiceLocation == null"><i class="far fa-money-bill-alt"></i></button>
+                </td>
+                <td style="width: 15%;">
+                    <button class="control-button" (click)="downloadFile(order, 'Warranty')"
+                    [class.control-button-purple]="order.WarrantyLocation != null"
+                    [class.control-button-disabled]="order.WarrantyLocation == null" [disabled]="order.WarrantyLocation == null"><i class="fas fa-shield-alt"></i></button>
+                </td>
+                <td style="width: 10%;">
+                    <button class="control-button control-button-red" (click)="deleteOrder(order.Id)"><i class="fas fa-trash-alt"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-template class="cart-items" #noOrders>
+        <div class="no-orders">
+            <span>Trenutno nemate niti jednu narudžbu.</span>
+            <br>
+            <a routerLink="/item/pos" class="btn">Idi na prodaju</a>
+        </div>
+    </ng-template>
+</div>

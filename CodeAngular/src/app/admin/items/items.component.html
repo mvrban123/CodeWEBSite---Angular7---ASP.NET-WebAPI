@@ -1,0 +1,36 @@
+<div class="items-content">
+        <button class="new-item" (click)="openItemDialog()">Novi proizvod</button>
+        <table class="items-table" *ngIf="items.length > 0; else noItems;">
+            <thead>
+                <tr>
+                    <th>Br.</th>
+                    <th>Naziv</th>
+                    <th>Tip</th>
+                    <th>Količina</th>
+                    <th>Cijena</th>
+                    <th>Kontrola</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of items; index as i">
+                    <td>{{ i + 1 }}</td>
+                    <td (click)="openItemDialog(item)">{{ item.Name }}</td>
+                    <td style="width: 15%">{{ item.ItemType.Name }}</td>
+                    <td style="width: 15%">{{ getAmount(item) }}</td>
+                    <td style="width: 20%">{{ item.Price }} kn</td>
+                    <td style="width: 15%">
+                        <button class="control-button" (click)="itemStorageAmount(item)" 
+                        [class.control-button-orange]="item.ItemType.Id == 1"
+                        [class.control-button-disabled]="item.ItemType.Id == 2" [disabled]="item.ItemType.Id == 2"><i class="fas fa-box-open"></i></button>
+                        <button class="control-button control-button-red" (click)="deleteItem(item.Id)"><i class="fas fa-trash-alt"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ng-template #noItems>
+            <hr>
+            <p style="display: block; text-align: center; font-size: 20px; margin-top: 15px;">
+                U skladištu ne postoji niti jedan proizvod.
+            </p>
+        </ng-template>
+    </div>

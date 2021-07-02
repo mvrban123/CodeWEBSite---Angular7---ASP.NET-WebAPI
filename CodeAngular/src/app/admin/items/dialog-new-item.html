@@ -1,0 +1,30 @@
+<h3>Novi proizvod</h3>
+<hr>
+<form [formGroup]="formModel" autocomplete="off" (submit)="onSubmit()">
+    <div class="form-group">
+        <label>Naziv</label>
+        <input class="form-control" formControlName="Name">
+    </div>
+    <div class="form-group">
+        <label>Vrsta</label>
+        <select class="item-type-select control-border" formControlName="ItemTypeId">
+            <option [ngValue]="null" disabled>Odaberi vrstu proizvoda</option>
+            <option *ngFor="let type of itemTypes" [ngValue]="type.Id">{{ type.Name }}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Cijena (kn)</label>
+        <input type="number" class="form-control" min=1 formControlName="Price">
+    </div>
+    <div class="form-group">
+        <label>Slika</label>
+        <input type="file" style="display: block" formControlName="Image">
+    </div>
+    <div class="form-group">
+        <label>Opis</label>
+        <textarea class="item-description control-border" rows="5" formControlName="Description"></textarea>
+    </div>
+    <div class="button-holder">
+        <button type="submit" [disabled]="formModel.invalid">Spremi</button>
+    </div>
+</form>

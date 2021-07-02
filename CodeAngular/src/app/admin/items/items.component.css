@@ -1,0 +1,50 @@
+.items-content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.items-content .new-item {
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    background-color: #319be4;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.items-content .new-item:hover {
+    background-color: #52b1f2;
+    transition: 0.4s;
+}
+
+.items-table {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.items-table thead {
+    background-color: #319be4;
+    color: white;
+}
+
+.items-table thead tr th {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid white;
+}
+
+.items-table tbody tr {
+    cursor: pointer;
+    border-bottom: 1px solid gainsboro;
+}
+
+.items-table tbody tr:hover {
+    background-color: #d6eeff;
+}
+
+.items-table tbody tr td {
+    padding: 10px;
+}

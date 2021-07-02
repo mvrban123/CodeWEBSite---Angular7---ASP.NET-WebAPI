@@ -1,0 +1,15 @@
+<div class="upload-content">
+    <label><b>Datoteka</b></label>
+    <input type="file" (change)="handleFileInput($event.target.files)">
+    <hr>
+    <label><b>Vrsta dokumenta</b></label>
+    <select (change)="changeDocumentType($event.target.value)">
+        <option [value]="1">Račun</option>
+        <option [value]="2">Jamstveni list</option>
+    </select>
+    <hr>
+    <button class="control-button"
+    [class.control-button-disabled]="fileToUpload == null"
+    [class.control-button-blue]="fileToUpload != null" 
+    [disabled]="fileToUpload == null" (click)="uploadFile()"><b>Upload</b></button>
+</div>
